@@ -29,3 +29,25 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 });
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+            $('.section_header').addClass('sticky');
+            if ($(window).width() <= 768) {
+                $('.header_links').addClass('sticky_links');
+            }
+        } else {
+            $('.section_header').removeClass('sticky');
+            $('.header_links').removeClass('sticky_links');
+        }
+    });
+  
+    $(window).resize(function() {
+      if ($(window).width() <= 768 && $(window).scrollTop() > 0) {
+        $('.header_links').addClass('sticky_links');
+      } else {
+        $('.header_links').removeClass('sticky_links');
+      }
+    });
+});  

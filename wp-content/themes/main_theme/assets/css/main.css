@@ -955,6 +955,9 @@ svg,
   animation: pulse 1.5s linear infinite;
   z-index: 1;
 }
+.main_scrollsnap {
+  overflow-x: clip;
+}
 .main_scrollsnap.modal-active {
   overflow: hidden !important;
 }
@@ -1155,6 +1158,7 @@ body.modal-active::before {
   background-color: #fff;
   width: 100vw;
   height: calc(100% - var(--slide-logo-height));
+  overflow-x: clip;
 }
 .section_banner .cubito-flotante {
   position: absolute;
@@ -1201,6 +1205,7 @@ body.modal-active::before {
   display: flex;
   align-items: center;
   width: 100vw;
+  overflow-x: clip;
 }
 .section_clients .slider {
   position: relative;
@@ -1218,9 +1223,13 @@ body.modal-active::before {
   height: 70px;
   margin: 0 60px;
 }
+.section_banner_and_clients {
+  overflow-x: clip;
+}
 .section_we_are {
   background-color: #fff;
   display: flex;
+  overflow-x: clip;
 }
 .section_we_are .cubito-flotante {
   position: absolute;
@@ -1662,7 +1671,8 @@ body.modal-active::before {
 }
 .section_thank_you {
   background-color: #6e00e3;
-  height: 100vh;
+  height: 100%;
+  overflow-x: clip;
 }
 .section_thank_you .container {
   height: 100%;
@@ -1693,6 +1703,7 @@ body.modal-active::before {
 .page_about .section_banner {
   display: flex;
   animation: backgroundColor 1s linear infinite;
+  overflow-x: clip;
 }
 .page_about .section_banner .container {
   display: flex;
@@ -1756,6 +1767,7 @@ body.modal-active::before {
   background-color: #f6f6f6;
   display: flex;
   padding: 5.625rem 0;
+  overflow-x: clip;
 }
 .page_about .section_mision .cubito-flotante {
   position: absolute;
@@ -1805,6 +1817,7 @@ body.modal-active::before {
   background-color: #fff;
   display: flex;
   padding: 5.625rem 0;
+  overflow-x: clip;
 }
 .page_about .section_vision .cubito-flotante {
   position: absolute;
@@ -1854,6 +1867,7 @@ body.modal-active::before {
   background-color: #6e00e3;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
 }
 .page_about .section_earth .pp-tableCell {
   display: flex;
@@ -2502,10 +2516,10 @@ body.modal-active::before {
     padding: 0;
     justify-content: flex-start;
   }
-  .section_testimonial .container {
-    padding: 5rem 0;
+  .section_testimonial .container:nth-child(2) {
+    padding: 3rem 0 6rem;
   }
-  .section_testimonial .container h2 {
+  .section_testimonial .container .subtitle {
     margin-bottom: 1.5rem;
     padding: 0 1.25rem;
     font-size: 8vw;
@@ -2515,7 +2529,7 @@ body.modal-active::before {
     --swiffy-slider-item-reveal: 2rem;
   }
   .section_testimonial .container .slider-container .card_testimonial {
-    padding: 3.125rem 1.875rem;
+    padding: 2.5rem 1.25rem;
   }
   .section_testimonial .container .slider-container .card_testimonial .description {
     margin-bottom: 1rem;
@@ -2541,11 +2555,15 @@ body.modal-active::before {
   .section_contact .container form .contact_form .box_input.box_input_100_mobile {
     width: 100%;
   }
+  .page_about .section_mision,
+  .page_about .section_vision {
+    padding: 0;
+  }
   .page_about .section_mision .container,
   .page_about .section_vision .container {
+    padding: 5rem 1.25rem;
     flex-direction: column;
     gap: 1.5rem;
-    justify-content: center;
   }
   .page_about .section_mision .container .col:nth-child(1),
   .page_about .section_vision .container .col:nth-child(1),

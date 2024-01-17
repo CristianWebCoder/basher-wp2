@@ -48,7 +48,7 @@ get_header();
                 $descripcion_sup = get_sub_field('descripcion_superior');
                 $descripcion_inf = get_sub_field('descripcion_inferior');
             ?>
-            <section class="section section_mision">
+            <section class="section section_mision pp-scrollable">
                 <img class="cubito-flotante cub-1" src="<?php echo get_template_directory_uri() ?>/assets/img/cubito-1.svg" alt="cubito">
                 <div class="container">
                     <div class="col">
@@ -71,7 +71,7 @@ get_header();
                 $descripcion_sup = get_sub_field('descripcion_superior');
                 $descripcion_inf = get_sub_field('descripcion_inferior');
             ?>
-            <section class="section section_vision">
+            <section class="section section_vision pp-scrollable">
                 <img class="cubito-flotante cub-1" src="<?php echo get_template_directory_uri() ?>/assets/img/cubito-1.svg" alt="cubito">
                 <div class="container">
                     <div class="col">

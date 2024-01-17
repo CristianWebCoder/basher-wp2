@@ -37,6 +37,7 @@
     100%
         scale 1
 .main_scrollsnap
+    overflow-x clip
     &.modal-active
         overflow hidden !important
         &::before
@@ -227,6 +228,7 @@ body
     background-color $white
     width 100vw
     height calc(100% - var(--slide-logo-height))
+    overflow-x clip
     .cubito-flotante
         position absolute
         &.cub-1
@@ -264,6 +266,7 @@ body
     display flex
     align-items center
     width 100vw
+    overflow-x clip
     .slider
         position relative
         overflow hidden
@@ -277,6 +280,8 @@ body
                 width auto
                 height 70px
                 margin 0 60px
+.section_banner_and_clients
+    overflow-x clip
 @keyframes scroll
     0%
         transform translateX(0)
@@ -292,6 +297,7 @@ body
 .section_we_are
     background-color $white
     display flex
+    overflow-x clip
     .cubito-flotante
         position absolute
         &.cub-1
@@ -659,7 +665,8 @@ body
                     font-size clamp(2.5rem, 10vw, 3.125rem)
 .section_thank_you
     background-color $primary_color
-    height 100vh
+    height 100%
+    overflow-x clip
     .container
         height 100%
         display flex
@@ -686,6 +693,7 @@ body
     .section_banner
         display flex
         animation backgroundColor 1s linear infinite
+        overflow-x clip
         .container
             display flex
             justify-content center
@@ -734,6 +742,7 @@ body
         background-color $gray_superlight
         display flex
         padding 5.625rem 0
+        overflow-x clip
         .cubito-flotante
             position absolute
             &.cub-1
@@ -772,6 +781,7 @@ body
         background-color $white
         display flex
         padding 5.625rem 0
+        overflow-x clip
         .cubito-flotante
             position absolute
             &.cub-1
@@ -810,6 +820,7 @@ body
         background-color $primary_color
         display flex
         flex-direction column
+        overflow-x clip
         .pp-tableCell
             display flex
             flex-direction column
@@ -1338,8 +1349,9 @@ body
         padding 0
         justify-content flex-start
         .container
-            padding 5rem 0
-            h2
+            &:nth-child(2)
+                padding 3rem 0 6rem
+            .subtitle
                 margin-bottom 1.5rem
                 padding 0 1.25rem
                 font-size 8vw
@@ -1348,7 +1360,7 @@ body
                 --swiffy-slider-item-reveal 2rem
             .slider-container
                 .card_testimonial
-                    padding 3.125rem 1.875rem
+                    padding 2.5rem 1.25rem
                     .description
                         margin-bottom 1rem
     .section_contact
@@ -1370,10 +1382,11 @@ body
     .page_about
         .section_mision
         .section_vision
+            padding 0
             .container
+                padding 5rem 1.25rem
                 flex-direction column
                 gap 1.5rem
-                justify-content center
                 .col
                     &:nth-child(1)
                     &:nth-child(2)
