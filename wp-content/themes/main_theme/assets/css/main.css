@@ -1674,14 +1674,14 @@ body.modal-active::before {
   height: auto;
   padding: 5rem 0;
 }
-.page_services .main_body .section_services .container:nth-child(1) {
+.page_services .main_body .section_services .container {
   margin-bottom: 3.25rem;
 }
-.page_services .main_body .section_services .container:nth-child(1) .subtitle {
+.page_services .main_body .section_services .container .subtitle {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
-.page_services .main_body .section_services .container:nth-child(1) .description {
+.page_services .main_body .section_services .container .super_description {
   font-size: 1.5rem;
 }
 .page_services .main_body .section_services .container .card_services .card {

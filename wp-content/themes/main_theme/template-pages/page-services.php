@@ -20,12 +20,8 @@ get_header();
                     $descripcion = get_sub_field('descripcion_principal');
                 ?>
                 <div class="container">
-                    <span class="line_subtitle">
-                        <h1 class="subtitle"><?php echo __($titulo, 'main_theme') ?></h1>
-                    </span>
-                    <div class="line_description">
-                        <div class="description"><?php echo __($descripcion, 'main_theme') ?></div>
-                    </div>
+                    <h1 class="subtitle"><?php echo __($titulo, 'main_theme') ?></h1>
+                    <div class="super_description"><?php echo __($descripcion, 'main_theme') ?></div>
                 </div>
             <?php endwhile; ?>
         <?php endif; ?>
