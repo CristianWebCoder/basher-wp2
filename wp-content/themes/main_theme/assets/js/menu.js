@@ -29,26 +29,3 @@ $(document).ready(function() {
         $(this).toggleClass('active');
     });
 });
-
-$(document).ready(function(){
-    var header = $('.section_header'); // Selecciona el elemento del encabezado
-    var headerLinks = $('.header_links'); // Selecciona los enlaces del encabezado
-    var mainScrollsnap = $('.main_scrollsnap'); // Selecciona el contenedor con scroll
-
-    function addOrRemoveStickyClasses() {
-        var containerScrolled = mainScrollsnap.scrollTop() > 50; // Verifica si el contenedor .main_scrollsnap se ha desplazado más de 50px
-
-        if(containerScrolled) {
-            header.addClass('sticky'); // Añade clase 'sticky' si el contenedor se ha desplazado
-            if($(window).width() <= 768) {
-                headerLinks.addClass('sticky_links'); // Añade clase 'sticky_links' a los enlaces si la pantalla es pequeña
-            }
-        } else {
-            header.removeClass('sticky'); // Remueve clase 'sticky' si el desplazamiento del contenedor está al principio
-            headerLinks.removeClass('sticky_links'); // Remueve clase 'sticky_links' de los enlaces
-        }
-    }
-
-    // Escuchar el evento de scroll en el contenedor .main_scrollsnap
-    mainScrollsnap.scroll(addOrRemoveStickyClasses);
-});

@@ -270,5 +270,26 @@ get_header();
     $('.slider').append(copy);
 
     var ajaxurl = "<?php echo admin_url('admin-ajax.php'); ?>";
+
+    $(document).ready(function() {
+        var header = $('.section_header'); // Selecciona el elemento del encabezado
+        var headerLinks = $('.header_links'); // Selecciona los enlaces del encabezado
+
+        function checkActiveClass() {
+            // Verifica si la sección .section_banner_and_clients tiene la clase 'active'
+            if (!$('.section_banner_and_clients').hasClass('active')) {
+                // Si no tiene la clase 'active', añade las clases 'sticky' al encabezado
+                header.addClass('sticky');
+                headerLinks.addClass('sticky_links');
+            } else {
+                // Si tiene la clase 'active', remueve las clases 'sticky' del encabezado
+                header.removeClass('sticky');
+                headerLinks.removeClass('sticky_links');
+            }
+        }
+
+        // Establecer un intervalo para comprobar la clase 'active' cada 100 milisegundos
+        setInterval(checkActiveClass, 100);
+    });
 </script>
 <?php get_footer(); ?>
